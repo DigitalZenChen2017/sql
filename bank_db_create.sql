@@ -20,16 +20,14 @@ Account_ID	INT							NOT NULL,
 FOREIGN KEY (Account_ID) 	REFERENCES accounts (ID)
 );
 
--- insert some rows into the Accounts table
-INSERT INTO accounts VALUES
-(1, 'Gary Henderson', '8888.00', '250.00'),
-(2, 'Meagean Hansen', '5444.00', '175.00'),
-(3, 'Nick Law', '3333.00', '88.00'),
-(4, 'Yelena Lapina', '3322.00', '88.00');
+-- Insert values into accounts table
+Insert accounts (ID, AccountHolder, Balance, Fees) Values (1, 'Gary Henderson', '8888.00', '250.00');
+Insert accounts (ID, AccountHolder, Balance, Fees)Values (2, 'Meagean Hansen', '5444.00', '175.00');
+Insert accounts (ID, AccountHolder, Balance, Fees) Values (3, 'Nick Law', '3333.00', '88.00');
+Insert accounts (ID, AccountHolder, Balance, Fees) Values (4, 'Yelena Lapina', '3322.00', '88.00');
 
--- insert some test data for invoice and line item, based on products above
-INSERT INTO transactions VALUES
-(1, '500.00','Deposit', 3),
-(2,'-200.00' ,'Withdrawal', 4),
-(3, '200.00','Deposit', 4),
-(4, '248.00','Deposit', 1);
+-- Insert values into transactions table
+Insert transactions (ID, Amount, Txn_Type, Account_ID) Values (1, '500.00','Deposit', 3);
+Insert transactions (ID, Amount, Txn_Type, Account_ID) Values (2,'-200.00' ,'Withdrawal', 4);
+Insert transactions (ID, Amount, Txn_Type, Account_ID) Values (3, '200.00','Deposit', 4);
+Insert transactions (ID, Amount, Txn_Type, Account_ID) Values (4, '248.00','Deposit', 1);
