@@ -16,8 +16,7 @@ CREATE TABLE transactions (
 ID				INT	 						NOT NULL			PRIMARY KEY  AUTO_INCREMENT,
 Amount		INT							NOT NULL,
 Txn_Type	VARCHAR(10)		NOT NULL,
-Account_ID	INT							NOT NULL,
-FOREIGN KEY (Account_ID) 	REFERENCES accounts (ID)
+Account_ID	INT							NOT NULL,			FOREIGN KEY (Account_ID) 	REFERENCES accounts (ID)
 );
 
 -- Insert values into accounts table
