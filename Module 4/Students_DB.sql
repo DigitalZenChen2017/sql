@@ -18,7 +18,7 @@ CREATE TABLE `course` (
 
 ALTER TABLE `user`
 ADD CONSTRAINT `FK_course`
-FOREIGN KEY (`CourseID`) REFERENCES `course` (`ID`)
+FOREIGN KEY (`CourseID`) REFERENCES `course` (`ID`) 
 ON UPDATE CASCADE;
 
 insert into course values (1, 'HTML5');
@@ -32,3 +32,5 @@ insert into user values (2, 'Bob', 1);
 insert into user values (3, 'Caroline', 2);
 insert into user values (4, 'David', 5);
 insert into user values (5, 'Emma', null);
+
+
